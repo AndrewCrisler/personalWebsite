@@ -1,0 +1,278 @@
+body {
+    background-image:  linear-gradient(to bottom left, rgb(16, 18, 19), rgb(38, 43, 44));
+}
+
+.header {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    height: 75px;
+    background-color: darkcyan;
+    overflow: hidden;
+    top: 0px;
+}
+
+.header h1 {
+    font-size: 24;
+    align-self: center;
+}
+
+
+
+
+#navBarHolder {
+    background-color: rgb(70, 70, 70);
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.notSticky {
+    margin-top: 75px;
+}
+
+#navBar {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown:hover {
+    background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: brown;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown-content:hover {
+    background-color: #ddd;
+  }
+
+li {
+    line-height: 250%;
+    color: white;
+    float: left;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    border-style: solid;
+    margin: -1px;
+    border-width: 1px;
+    border-color: black;
+}
+
+#home {
+    background-color: rgb(97, 57, 57);
+}
+#projects{
+    border-right-width: 2px;
+}
+#other {
+    float: right;
+    border-left-width: 2px;
+}
+
+#navlink {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+#aboutSection {
+    width: 60%;
+    background-color: darkgray;
+    margin-left: 20%;
+    overflow: hidden;
+}
+
+.shift {
+    margin-top: calc(8% + 115px);
+}
+
+.noShift {
+    margin-top: 8%;
+}
+
+#aboutText {
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 0%;
+}
+#Name{
+    position: relative;
+    text-align: left;
+    margin-top: 1%;
+}
+#aboutBreak{
+    margin: -3%;
+    margin-left: 0.5%;
+}
+#aboutTextBody {
+    left: 5%;
+    padding-left: 5%;
+    margin: -5%;
+}
+
+#portrait {
+    float: left;
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+#main {
+    background-color: rgb(58, 58, 58);
+    width: 80%;
+    margin-top: 8%;
+    margin-left: 10%;
+    margin-bottom: 0px;
+}
+
+#entry1{
+    background-color: rgb(80, 80, 80);
+    overflow: hidden;
+}
+#entry3 {
+    background-color: rgb(80, 80, 80);
+    overflow: hidden;
+}
+#entry2{
+    overflow: hidden;
+}
+
+.leftText {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.leftText div {
+    float: left;
+    width: 60%;
+    margin-left: 5%;
+}
+.leftText img {
+    float: right;
+    margin-right: 5%;
+}
+
+.rightText{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.rightText div{
+    float: right;
+    width: 60%;
+    margin-right: 5%;
+}
+/*could not get the right class working. this fixed it, but it is not very scalable*/
+#mainImg2 {
+    margin-left: 5%;
+}
+
+.textEntry {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+.textEntry h2 {
+    text-align: center;
+}
+.textEntry p {
+    text-align: left;
+}
+
+
+
+
+
+
+#footer {
+    background-color:darkcyan;
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    height: 150px;
+}
+#icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 50px;
+    background-color: darkgray;
+    float: left;
+}
+
+.vl {
+        border-left: 2px solid rgb(0, 0, 0);
+        height: 110px;
+        position: absolute;
+        margin-left: 200px;
+        top: 20px;
+        float: left;
+}
+
+#contactSection {
+    float: left;
+    margin-left: 80px;
+}
+
+#socialSection {
+    float: left;
+    margin-left: 80px;
+}
+
+#resumeSection {
+    float: left;
+    margin-left: 80px;
+}
