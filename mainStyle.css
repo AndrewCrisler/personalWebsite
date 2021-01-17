@@ -1,14 +1,26 @@
+:root {
+    --widthFull: 0px; /*this will be updated in javascript to a dynamicly changing value*/
+    --width80: calc(var(--widthFull) * 0.8);
+    --width60: calc(var(--widthFull) * 0.6);
+    --width20: calc(var(--widthFull) * 0.2);
+    --width10: calc(var(--widthFull) * 0.1);
+}
+
 body {
     background-image:  linear-gradient(to bottom left, rgb(16, 18, 19), rgb(38, 43, 44));
-    overflow-y: scroll;
     overflow-x: hidden;
     margin-bottom: 200px;
+    scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
 }
 
 .header {
     position: absolute;
-    width: 80%;
-    margin-left: 10%;
+    width: var(--width80);
+    margin-left: var(--width10);
     height: 75px;
     background-color: darkcyan;
     overflow: hidden;
@@ -25,15 +37,15 @@ body {
 
 #navBarHolder {
     background-color: rgb(70, 70, 70);
-    width: 80%;
+    width: var(--width80);
     height: 40px;
-    margin-left: 10%;
+    margin-left: var(--width10);
     z-index: 5;
-    overflow: hidden;
 }
 
 .sticky {
     position: fixed;
+    overflow: visible;
     top: 0;
 }
 
@@ -95,22 +107,32 @@ li {
     color: white;
     float: left;
     text-align: center;
-    width: 10%;
+    width: 100px;
     height: 100%;
-    border-style: solid;
-    margin: -1px;
-    border-width: 1px;
+    margin: 0px;
     border-color: black;
 }
 
 #home {
-    background-color: rgb(97, 57, 57);
-}
-#projects{
+    background-color: cyan;
+    color: black;
+    border-color: black;
+    border-right-style: solid;
     border-right-width: 2px;
 }
+#cv {
+    border-right-style: solid;
+    border-right-width: 2px;
+    
+}
+#projects{
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
 #other {
     float: right;
+    border-left-style: solid;
     border-left-width: 2px;
 }
 
@@ -126,9 +148,9 @@ li {
 
 
 #aboutSection {
-    width: 60%;
+    width: var(--width60);
     background-color: darkgray;
-    margin-left: 20%;
+    margin-left: var(--width20);
     overflow: hidden;
 }
 
@@ -174,9 +196,9 @@ li {
 
 #main {
     background-color: rgb(58, 58, 58);
-    width: 80%;
+    width: var(--width80);
     margin-top: 8%;
-    margin-left: 10%;
+    margin-left: var(--width10);
     margin-bottom: 0px;
 }
 
@@ -242,8 +264,8 @@ li {
     background-color:darkcyan;
     position: absolute;
     overflow: hidden;
-    width: 80%;
-    margin-left: 10%;
+    width: var(--width80);
+    margin-left: var(--width10);
     margin-top: 50px;
     height: 150px;
 }
