@@ -4,27 +4,43 @@
     --width60: calc(var(--widthFull) * 0.6);
     --width20: calc(var(--widthFull) * 0.2);
     --width10: calc(var(--widthFull) * 0.1);
+
+    --rotatorPos: 180deg;
+    --rotatorPosOpposite: 180deg;
+
+    --linearAnimationProg: 0px;
+    --linearAnimationPercent: 0;
+
+    /* colors */
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --gray: rgb(89, 89, 89);
+    --darkCyan: rgb(53, 179, 162);
 }
 
 body {
+    /* background-color: var(--white); */
     background-image:  linear-gradient(to bottom left, rgb(16, 18, 19), rgb(38, 43, 44));
     overflow-x: hidden;
     margin-bottom: 200px;
     scrollbar-width: none;
 }
 
-.body::-webkit-scrollbar {
-    display: none;
+.noScroll {
+    overflow: hidden;
 }
 
 .header {
+    /* opacity: 0; */
     position: absolute;
     width: var(--width80);
     margin-left: var(--width10);
     height: 75px;
     background-color: darkcyan;
-    overflow: hidden;
-    top: 0px;
+
+    z-index: 0;
+
+    top: calc(1.35 * var(--linearAnimationProg) - 135px);
 }
 
 .header h1 {
@@ -40,17 +56,17 @@ body {
     width: var(--width80);
     height: 40px;
     margin-left: var(--width10);
-    z-index: 5;
 }
 
 .sticky {
     position: fixed;
     overflow: visible;
     top: 0;
+    z-index: 5;
 }
 
 .notSticky {
-    margin-top: 75px;
+    margin-top: calc(1.35 * var(--linearAnimationProg) - 60px);
 }
 
 #navBar {
@@ -60,6 +76,7 @@ body {
     padding: 0;
     position: relative;
     overflow: hidden;
+    background-color: rgb(70, 70, 70);
 }
 
 .dropdown:hover {
@@ -147,46 +164,93 @@ li {
 
 
 
-#aboutSection {
-    width: var(--width60);
-    background-color: darkgray;
-    margin-left: var(--width20);
-    overflow: hidden;
-}
-
 .shift {
-    margin-top: calc(8% + 115px);
+    margin-top: calc(10% + 115px);
 }
 
 .noShift {
-    margin-top: 8%;
+    margin-top: calc(135px - 1.35 * var(--linearAnimationProg)  + 10%);
 }
 
 #aboutText {
+    position: relative;
     width: 50%;
-    float: right;
-    margin-right: 10%;
-    margin-top: 0%;
+    margin-left: 37%;
 }
+
+#AboutTextHolder {
+    position: relative;
+    width: calc(var(--linearAnimationProg) * 7.00 - 300px);
+    /* opacity: calc(var(--linearAnimationPercent) * 0.01); */
+    transform: translate(175px, 80px);
+    overflow: hidden;
+    z-index: 0;
+}
+
+#AboutTextHolderSlide {
+        color: aqua;
+        width: 400px;
+        
+        /* make text into an image or vector */
+}
+
 #Name{
     position: relative;
     text-align: left;
     margin-top: 1%;
 }
 #aboutBreak{
-    margin: -3%;
-    margin-left: 0.5%;
+    color: aqua;
+    width: 300px;
+    margin-top: -2%;
+    margin-left: 3%;
 }
-#aboutTextBody {
-    left: 5%;
-    padding-left: 5%;
-    margin: -5%;
+#profession {
+    margin-top: 1%;
+    margin-left: 6%;
 }
 
-#portrait {
-    float: left;
-    margin-left: 10%;
+#aboutTextBody {
+    width: 400px;
+    left: 5%;
+    margin-top: -3.5%;
 }
+
+#rotator {
+    position: absolute;
+    transform: translate(50px, 50px);
+    z-index: 5;
+}
+
+#portraitImage {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    transform: rotate(var(--rotatorPos)) translateX(calc(var(--linearAnimationProg) * -2));
+}
+
+#leftGear {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+
+    transform: rotate(var(--rotatorPosOpposite)) translateX(calc(var(--linearAnimationProg) * 3));
+}
+
+#rightGear {
+    position: absolute;
+    margin-top: 0%;
+    padding-top: 0%;
+    height: 400px;
+    width: 400px;
+
+    transform: rotate(var(--rotatorPosOpposite)) translateX(calc(var(--linearAnimationProg) * -3));
+}
+
+
 
 
 
@@ -197,7 +261,7 @@ li {
 #main {
     background-color: rgb(58, 58, 58);
     width: var(--width80);
-    margin-top: 8%;
+    margin-top: calc(300px - 3.00 * var(--linearAnimationProg) + 26%);
     margin-left: var(--width10);
     margin-bottom: 0px;
 }
